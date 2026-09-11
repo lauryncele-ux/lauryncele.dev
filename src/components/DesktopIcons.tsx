@@ -10,7 +10,8 @@ const icons: { id: GameId; Icon: LucideIcon; label: string; bg: string }[] = [
 
 export function DesktopIcons({ onOpen }: { onOpen: (id: GameId) => void }) {
   return (
-    <div className="fixed bottom-6 right-6 z-30 flex flex-col gap-3">
+    // Hidden on narrow screens, where they would sit on top of the page content.
+    <div className="fixed bottom-6 right-6 z-30 hidden flex-col gap-3 lg:flex">
       {icons.map(({ id, Icon, label, bg }) => (
         <button
           key={id}

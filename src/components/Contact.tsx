@@ -3,7 +3,7 @@ import { profile } from '../data/resume'
 
 const footerLinks = [
   { label: 'What I do', href: '#services' },
-  { label: 'Work', href: '#work' },
+  { label: 'Demos', href: '#demos' },
   { label: 'Facts', href: '#facts' },
   { label: 'Arcade', href: '#play' },
   { label: 'LinkedIn', href: profile.linkedin, external: true },

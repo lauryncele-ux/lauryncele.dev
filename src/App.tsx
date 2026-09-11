@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { About } from './components/About'
 import { BounceGame } from './components/BounceGame'
-import { CaseStudies } from './components/CaseStudies'
 import { Contact } from './components/Contact'
+import { Demos } from './components/Demos'
 import { DesktopIcons, type GameId } from './components/DesktopIcons'
 import { FunFacts } from './components/FunFacts'
 import { Hero } from './components/Hero'
-import { LogoWall } from './components/Logos'
 import { Nav } from './components/Nav'
 import { PacManGame } from './components/PacManGame'
 import { Play } from './components/Play'
@@ -33,10 +32,9 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <LogoWall />
         <About />
         <Services />
-        <CaseStudies />
+        <Demos />
         <Skills />
         <FunFacts />
         <Play
