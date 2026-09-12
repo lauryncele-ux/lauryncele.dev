@@ -3,10 +3,10 @@ import { passions, profile } from '../data/resume'
 import { Kaleidoscope } from './Kaleidoscope'
 
 const accentMap: Record<string, string> = {
-  coral: 'bg-coral text-cream',
-  teal: 'bg-teal text-ink',
-  mango: 'bg-mango text-ink',
-  violet: 'bg-violet text-cream',
+  coral: 'bg-coral text-paper',
+  teal: 'bg-teal text-night',
+  mango: 'bg-mango text-night',
+  violet: 'bg-violet text-paper',
 }
 
 export function About() {

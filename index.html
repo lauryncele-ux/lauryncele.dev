@@ -12,6 +12,21 @@
       content="Lauryn N. Cele, Senior Frontend Developer. I build fast, accessible websites and apps in React and TypeScript that help businesses sell more and support their customers better."
     />
     <meta name="theme-color" content="#F6F0E6" />
+    <script>
+      try {
+        var t = localStorage.getItem('theme')
+        if (
+          t === 'dark' ||
+          (t !== 'light' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark')
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute('content', '#161310')
+        }
+      } catch (e) {}
+    </script>
     <meta name="author" content="Lauryn N. Cele" />
     <link rel="canonical" href="https://lauryncele.dev/" />
 

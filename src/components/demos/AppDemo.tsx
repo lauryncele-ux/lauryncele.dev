@@ -44,7 +44,7 @@ export function AppDemo() {
   return (
     <div className="flex justify-center py-2">
       <div className="w-[17rem] overflow-hidden rounded-[2rem] border-2 border-ink bg-cream shadow-punch">
-        <div className="flex items-center justify-between bg-ink px-5 py-2 font-mono text-[10px] text-cream">
+        <div className="flex items-center justify-between bg-night px-5 py-2 font-mono text-[10px] text-paper">
           <span>9:41</span>
           <span className="flex items-center gap-1">
             <Signal size={11} />
@@ -61,7 +61,7 @@ export function AppDemo() {
           <span className="relative grid h-8 w-8 place-items-center rounded-full border-2 border-ink bg-mango">
             <Bell size={14} />
             {bag > 0 && (
-              <span className="absolute -right-1.5 -top-1.5 grid h-4 min-w-4 place-items-center rounded-full border border-ink bg-coral px-1 font-mono text-[9px] text-cream">
+              <span className="absolute -right-1.5 -top-1.5 grid h-4 min-w-4 place-items-center rounded-full border border-ink bg-coral px-1 font-mono text-[9px] text-paper">
                 {bag}
               </span>
             )}

@@ -10,7 +10,6 @@ import { Nav } from './components/Nav'
 import { PacManGame } from './components/PacManGame'
 import { Play } from './components/Play'
 import { Services } from './components/Services'
-import { Skills } from './components/Skills'
 import { SnakeGame } from './components/SnakeGame'
 export default function App() {
   const [openGames, setOpenGames] = useState<GameId[]>([])
@@ -35,7 +34,6 @@ export default function App() {
         <About />
         <Services />
         <Demos />
-        <Skills />
         <FunFacts />
         <Play
           openGames={openGames}

@@ -63,7 +63,7 @@ export function ShopDemo() {
         >
           <ShoppingBag size={13} />
           Bag
-          <span className="grid h-4 min-w-4 place-items-center rounded-full bg-coral px-1 font-mono text-[10px] text-cream">
+          <span className="grid h-4 min-w-4 place-items-center rounded-full bg-coral px-1 font-mono text-[10px] text-paper">
             {count}
           </span>
         </button>
@@ -240,7 +240,7 @@ export function ShopDemo() {
                       setPlaced(true)
                       setCart({})
                     }}
-                    className="mt-3 w-full rounded-full border-2 border-ink bg-coral px-4 py-2.5 text-sm font-bold text-cream transition enabled:hover:-translate-y-0.5 disabled:opacity-40"
+                    className="mt-3 w-full rounded-full border-2 border-ink bg-coral px-4 py-2.5 text-sm font-bold text-paper transition enabled:hover:-translate-y-0.5 disabled:opacity-40"
                   >
                     Checkout
                   </button>

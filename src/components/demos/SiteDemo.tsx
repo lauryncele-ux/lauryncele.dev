@@ -106,7 +106,7 @@ export function SiteDemo() {
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 <span
-                  className={`rounded-full border-2 ${edge} px-4 py-2 text-xs font-bold ${dark ? 'bg-coral text-cream' : 'bg-coral text-cream'}`}
+                  className={`rounded-full border-2 ${edge} px-4 py-2 text-xs font-bold bg-coral text-paper`}
                 >
                   Browse the shop
                 </span>

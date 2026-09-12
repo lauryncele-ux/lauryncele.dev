@@ -50,7 +50,7 @@ export function Hero() {
           >
             <a
               href="#services"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-coral px-5 py-3 text-sm font-bold text-cream shadow-punch transition hover:-translate-y-1"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-coral px-5 py-3 text-sm font-bold text-paper shadow-punch transition hover:-translate-y-1"
             >
               What I can do for you <ArrowDownRight size={16} />
             </a>
@@ -65,7 +65,7 @@ export function Hero() {
               href="#play"
               className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream px-5 py-3 text-sm font-bold transition hover:-translate-y-1 hover:shadow-punch"
             >
-              Play the arcade
+              Nostalgia corner
             </a>
           </motion.div>
         </div>
@@ -76,18 +76,18 @@ export function Hero() {
           transition={{ delay: 0.15 }}
           className="relative"
         >
-          <div className="relative rounded-[2rem] border-2 border-ink bg-ink p-6 text-cream shadow-punch">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-cream/60">
+          <div className="relative rounded-[2rem] border-2 border-ink bg-night p-6 text-paper shadow-punch">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-paper/60">
               Right now
             </p>
             <p className="mt-3 font-display text-3xl font-bold leading-tight">
               Building interfaces used by 100K+ people a day
             </p>
-            <div className="mt-6 grid grid-cols-3 gap-3 border-t border-cream/20 pt-5">
+            <div className="mt-6 grid grid-cols-3 gap-3 border-t border-paper/20 pt-5">
               {profile.stats.map((s) => (
                 <div key={s.label}>
                   <p className="font-display text-2xl font-bold text-mango">{s.value}</p>
-                  <p className="mt-1 text-[11px] uppercase tracking-wide text-cream/55">
+                  <p className="mt-1 text-[11px] uppercase tracking-wide text-paper/55">
                     {s.label}
                   </p>
                 </div>
@@ -98,24 +98,20 @@ export function Hero() {
           <div className="absolute -bottom-6 -left-4 hidden rotate-[-6deg] rounded-2xl border-2 border-ink bg-teal px-4 py-3 text-sm font-bold text-ink shadow-punch sm:block">
             Design ↔ Code
           </div>
-          <div className="absolute -right-3 -top-4 hidden rotate-[8deg] rounded-2xl border-2 border-ink bg-violet px-4 py-3 text-sm font-bold text-cream shadow-punch sm:block">
+          <div className="absolute -right-3 -top-4 hidden rotate-[8deg] rounded-2xl border-2 border-ink bg-violet px-4 py-3 text-sm font-bold text-paper shadow-punch sm:block">
             7+ yrs deep
           </div>
         </motion.div>
       </div>
 
-      <div className="mx-auto mt-16 max-w-6xl px-5">
-        <p className="font-mono text-xs uppercase tracking-[0.22em] text-ink/50">
-          Clients
+      <div className="mx-auto mt-20 max-w-5xl px-5 text-center md:mt-28">
+        <h2 className="font-display text-4xl font-bold md:text-5xl">Clients</h2>
+        <p className="mx-auto mt-4 max-w-xl text-ink/65">
+          A few of the companies and products I have built interfaces for.
         </p>
-        <p className="mt-2 max-w-2xl text-sm text-ink/65 md:text-base">
-          A few of the companies and products I have built interfaces for —
-          betting platforms, retail, and the studios that hired me to make them.
-        </p>
-      </div>
+        <div className="mx-auto mt-8 h-px w-16 bg-ink/25" aria-hidden />
 
-      <div className="mx-auto mt-5 max-w-6xl px-5">
-        <div className="flex flex-wrap gap-2.5">
+        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-5">
           {clients.map((client) => (
             <a
               key={client.name}
@@ -123,22 +119,19 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               title={client.name}
-              className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream py-1.5 pl-1.5 pr-3.5 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-punch"
+              className="flex h-16 w-full items-center justify-center opacity-90 transition hover:-translate-y-0.5 hover:opacity-100"
             >
               <img
                 src={client.src}
-                alt=""
+                alt={client.name}
                 className={
                   client.kind === 'mark'
-                    ? 'h-8 w-8 shrink-0 rounded-full bg-soft object-contain'
-                    : 'h-6 w-auto max-w-[9.5rem] shrink-0 object-contain px-1'
+                    ? 'h-12 w-12 object-contain'
+                    : `h-9 w-auto max-w-[9.5rem] object-contain ${
+                        client.invertDark ? 'dark:brightness-0 dark:invert' : ''
+                      }`
                 }
               />
-              {client.kind === 'mark' ? (
-                <span>{client.name}</span>
-              ) : (
-                <span className="sr-only">{client.name}</span>
-              )}
             </a>
           ))}
         </div>

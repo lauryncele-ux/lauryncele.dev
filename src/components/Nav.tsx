@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { LightBulb } from './LightBulb'
 
 const links = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'What I do' },
   { href: '#demos', label: 'Demos' },
-  { href: '#skills', label: 'Skills' },
   { href: '#facts', label: 'Facts' },
-  { href: '#play', label: 'Play' },
+  { href: '#play', label: 'Nostalgia' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -49,16 +49,20 @@ export function Nav() {
           >
             Say hello
           </a>
+          <LightBulb />
         </nav>
 
-        <button
-          type="button"
-          className="rounded-lg border-2 border-ink p-2 md:hidden"
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LightBulb />
+          <button
+            type="button"
+            className="rounded-lg border-2 border-ink p-2"
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
 
       {open && (

@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        cream: '#F6F0E6',
-        ink: '#1A1A1A',
-        soft: '#EDE4D6',
+        cream: 'var(--cream)',
+        ink: 'var(--ink)',
+        soft: 'var(--soft)',
+        paper: 'var(--paper)',
+        night: 'var(--night)',
         coral: '#FF4D6D',
         mango: '#FFB347',
         teal: '#2EC4B6',
@@ -19,13 +22,14 @@ export default {
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
-        punch: '6px 6px 0 0 #1A1A1A',
-        soft: '0 20px 50px rgba(26,26,26,0.08)',
+        punch: '6px 6px 0 0 var(--ink)',
+        soft: '0 20px 50px color-mix(in srgb, var(--ink) 12%, transparent)',
       },
       animation: {
         float: 'float 6s ease-in-out infinite',
         spinslow: 'spin 28s linear infinite',
         orbit: 'orbit 18s linear infinite',
+        marquee: 'marquee 28s linear infinite',
       },
       keyframes: {
         float: {
@@ -35,6 +39,10 @@ export default {
         orbit: {
           '0%': { transform: 'rotate(0deg) translateX(var(--orbit-r)) rotate(0deg)' },
           '100%': { transform: 'rotate(360deg) translateX(var(--orbit-r)) rotate(-360deg)' },
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
         },
       },
     },
