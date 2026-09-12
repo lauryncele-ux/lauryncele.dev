@@ -1,38 +1,7 @@
 import { motion } from 'framer-motion'
-import {
-  ArrowDownRight,
-  Atom,
-  Blocks,
-  CreditCard,
-  FileDown,
-  FlaskConical,
-  Gamepad2,
-  MapPin,
-  PenTool,
-  ShoppingCart,
-  Sparkles,
-  Sprout,
-  Waves,
-  Worm,
-  Zap,
-  type LucideIcon,
-} from 'lucide-react'
-import { interests, profile } from '../data/resume'
-
-const interestIcons: Record<string, LucideIcon> = {
-  Atom,
-  Blocks,
-  CreditCard,
-  Gamepad2,
-  Sparkles,
-  Sprout,
-  Waves,
-  PenTool,
-  ShoppingCart,
-  Zap,
-  FlaskConical,
-  Worm,
-}
+import { ArrowDownRight, FileDown, MapPin } from 'lucide-react'
+import { clients } from '../data/clients'
+import { profile } from '../data/resume'
 
 export function Hero() {
   return (
@@ -135,28 +104,45 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="mx-auto mt-16 max-w-6xl overflow-hidden px-5">
-        <div className="flex animate-[marquee_28s_linear_infinite] gap-3 whitespace-nowrap">
-          {[...interests, ...interests].map((item, i) => {
-            const Icon = interestIcons[item.icon]
-            return (
-              <span
-                key={`${item.label}-${i}`}
-                className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-soft px-4 py-2 text-sm font-medium"
-              >
-                <Icon size={15} strokeWidth={2} /> {item.label}
-              </span>
-            )
-          })}
-        </div>
+      <div className="mx-auto mt-16 max-w-6xl px-5">
+        <p className="font-mono text-xs uppercase tracking-[0.22em] text-ink/50">
+          Clients
+        </p>
+        <p className="mt-2 max-w-2xl text-sm text-ink/65 md:text-base">
+          A few of the companies and products I have built interfaces for —
+          betting platforms, retail, and the studios that hired me to make them.
+        </p>
       </div>
 
-      <style>{`
-        @keyframes marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-      `}</style>
+      <div className="mx-auto mt-5 max-w-6xl px-5">
+        <div className="flex flex-wrap gap-2.5">
+          {clients.map((client) => (
+            <a
+              key={client.name}
+              href={client.href}
+              target="_blank"
+              rel="noreferrer"
+              title={client.name}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-cream py-1.5 pl-1.5 pr-3.5 text-sm font-medium transition hover:-translate-y-0.5 hover:shadow-punch"
+            >
+              <img
+                src={client.src}
+                alt=""
+                className={
+                  client.kind === 'mark'
+                    ? 'h-8 w-8 shrink-0 rounded-full bg-soft object-contain'
+                    : 'h-6 w-auto max-w-[9.5rem] shrink-0 object-contain px-1'
+                }
+              />
+              {client.kind === 'mark' ? (
+                <span>{client.name}</span>
+              ) : (
+                <span className="sr-only">{client.name}</span>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
   )
 }
