@@ -478,7 +478,7 @@ export function PacManGame({
 
   return (
     <RetroWindow
-      title="pacman.exe"
+      title="Pac-Man"
       open={isOpen}
       onClose={onClose ?? (() => {})}
       onFocus={onFocus ?? (() => {})}

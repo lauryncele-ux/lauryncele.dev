@@ -3,9 +3,9 @@ import { Worm, Circle, Ghost, type LucideIcon } from 'lucide-react'
 export type GameId = 'snake' | 'bounce' | 'pacman'
 
 const icons: { id: GameId; Icon: LucideIcon; label: string; bg: string }[] = [
-  { id: 'snake', Icon: Worm, label: 'snake.exe', bg: 'bg-teal' },
-  { id: 'bounce', Icon: Circle, label: 'bounce.exe', bg: 'bg-mango' },
-  { id: 'pacman', Icon: Ghost, label: 'pacman.exe', bg: 'bg-coral' },
+  { id: 'snake', Icon: Worm, label: 'Snake', bg: 'bg-teal' },
+  { id: 'bounce', Icon: Circle, label: 'Bounce', bg: 'bg-mango' },
+  { id: 'pacman', Icon: Ghost, label: 'Pac-Man', bg: 'bg-coral' },
 ]
 
 export function DesktopIcons({ onOpen }: { onOpen: (id: GameId) => void }) {

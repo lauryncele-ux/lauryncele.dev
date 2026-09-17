@@ -23,7 +23,7 @@ const games: {
 }[] = [
   {
     id: 'snake',
-    title: 'snake.exe',
+    title: 'Snake',
     Icon: Worm,
     Game: SnakeGame,
     blurb: 'The Nokia classic, except you eat L\u2019s. Grow, don\u2019t bite yourself.',
@@ -31,7 +31,7 @@ const games: {
   },
   {
     id: 'bounce',
-    title: 'bounce.exe',
+    title: 'Bounce',
     Icon: Circle,
     Game: BounceGame,
     blurb: 'Bounce the red ball, collect all five L\u2019s, dodge the spikes.',
@@ -39,7 +39,7 @@ const games: {
   },
   {
     id: 'pacman',
-    title: 'pacman.exe',
+    title: 'Pac-Man',
     Icon: Ghost,
     Game: PacManGame,
     blurb: 'Eat every L, grab a big one, turn the ghosts edible.',

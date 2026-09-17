@@ -253,7 +253,7 @@ export function SnakeGame({
 
   return (
     <RetroWindow
-      title="snake.exe"
+      title="Snake"
       open={isOpen}
       onClose={onClose ?? (() => {})}
       onFocus={onFocus ?? (() => {})}

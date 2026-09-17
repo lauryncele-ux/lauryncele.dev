@@ -351,7 +351,7 @@ export function BounceGame({
 
   return (
     <RetroWindow
-      title="bounce.exe"
+      title="Bounce"
       open={isOpen}
       onClose={onClose ?? (() => {})}
       onFocus={onFocus ?? (() => {})}
