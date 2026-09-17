@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: 'var(--cream)',
-        ink: 'var(--ink)',
-        soft: 'var(--soft)',
-        paper: 'var(--paper)',
-        night: 'var(--night)',
+        cream: 'rgb(var(--cream) / <alpha-value>)',
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        soft: 'rgb(var(--soft) / <alpha-value>)',
+        paper: 'rgb(var(--paper) / <alpha-value>)',
+        night: 'rgb(var(--night) / <alpha-value>)',
         coral: '#FF4D6D',
         mango: '#FFB347',
         teal: '#2EC4B6',
@@ -22,8 +22,8 @@ export default {
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
-        punch: '6px 6px 0 0 var(--ink)',
-        soft: '0 20px 50px color-mix(in srgb, var(--ink) 12%, transparent)',
+        punch: '6px 6px 0 0 rgb(var(--ink))',
+        soft: '0 20px 50px rgb(var(--ink) / 0.12)',
       },
       animation: {
         float: 'float 6s ease-in-out infinite',

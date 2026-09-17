@@ -13,13 +13,9 @@
     />
     <meta name="theme-color" content="#F6F0E6" />
     <script>
+      // Everyone starts with the lights on; dark is opt-in via the lamp.
       try {
-        var t = localStorage.getItem('theme')
-        if (
-          t === 'dark' ||
-          (t !== 'light' &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
+        if (localStorage.getItem('theme') === 'dark') {
           document.documentElement.classList.add('dark')
           document
             .querySelector('meta[name="theme-color"]')

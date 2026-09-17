@@ -25,7 +25,9 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all ${
-        scrolled ? 'bg-cream/90 backdrop-blur-md border-b border-ink/10' : ''
+        scrolled
+          ? 'border-b-2 border-ink/15 bg-cream/95 backdrop-blur-md'
+          : ''
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
