@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lauryncele.dev/sitemap.xml
+Sitemap: https://lauryncodes.com/sitemap.xml
