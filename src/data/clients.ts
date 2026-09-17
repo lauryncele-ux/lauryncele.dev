@@ -15,7 +15,6 @@ export type ClientLogo = {
   src: string
   // 'mark' is a square brand icon, 'word' is a horizontal wordmark.
   kind: 'mark' | 'word'
-  invertDark?: boolean
 }
 
 export const clients: ClientLogo[] = [
@@ -30,7 +29,6 @@ export const clients: ClientLogo[] = [
     href: 'https://www.sunbet.co.za/',
     src: sunbet,
     kind: 'word',
-    invertDark: true,
   },
   {
     name: 'Privé City',

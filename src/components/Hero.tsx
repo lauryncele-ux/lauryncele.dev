@@ -111,7 +111,7 @@ export function Hero() {
         </p>
         <div className="mx-auto mt-8 h-px w-16 bg-ink/25" aria-hidden />
 
-        <div className="mt-12 grid grid-cols-2 items-center justify-items-center gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {clients.map((client) => (
             <a
               key={client.name}
@@ -119,17 +119,15 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               title={client.name}
-              className="flex h-16 w-full items-center justify-center opacity-90 transition hover:-translate-y-0.5 hover:opacity-100"
+              className="flex h-24 items-center justify-center rounded-2xl border-2 border-night bg-paper px-4 transition hover:-translate-y-1 hover:shadow-punch"
             >
               <img
                 src={client.src}
                 alt={client.name}
                 className={
                   client.kind === 'mark'
-                    ? 'h-12 w-12 object-contain'
-                    : `h-9 w-auto max-w-[9.5rem] object-contain ${
-                        client.invertDark ? 'dark:brightness-0 dark:invert' : ''
-                      }`
+                    ? 'h-12 w-12 rounded-xl object-contain'
+                    : 'h-8 w-auto max-w-full object-contain'
                 }
               />
             </a>
