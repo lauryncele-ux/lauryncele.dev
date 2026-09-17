@@ -6,6 +6,6 @@ declare const process: { env: Record<string, string | undefined> }
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // GitHub Pages serves this repo at /lauryncele.dev/ until a custom domain is attached.
+  // Served from the apex domain (lauryncele.dev) via GitHub Pages.
   base: process.env.VITE_BASE || '/',
 })
